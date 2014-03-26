@@ -1,6 +1,7 @@
 TD.Views.NewTaskView = Backbone.View.extend({
   events: {
-    "submit form": "submit"
+    "submit form": "submit",
+    "submit form": "cancel"
   },
 
   render: function () {
@@ -22,5 +23,11 @@ TD.Views.NewTaskView = Backbone.View.extend({
     that.collection.add(task);
     task.save();
     Backbone.history.navigate("#/");
+  },
+  
+  cancel: function() {
+    event.preventDefault();
+    
+    Backbone.history.navigate("#/")
   }
 });
