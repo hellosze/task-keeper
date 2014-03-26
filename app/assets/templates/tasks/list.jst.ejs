@@ -1,9 +1,11 @@
 <ul>
-  <% _(tasks).each(function (task) { %>
+  <% tasks.each(function (task) { %>
     <li class="task">
-      <a href="#/tasks/<%= task.id %>">
-        <%= task.title %>
+      <a href="#/tasks/<%= task.escape("id") %>">
+        <%= task.escape("title")%>
       </a>
     </li>
   <% }); %>
 </ul>
+
+<a href="#/tasks/new">New Task</a>

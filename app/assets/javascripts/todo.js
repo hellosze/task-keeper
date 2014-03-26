@@ -4,7 +4,9 @@ window.TD = {
   Views: {},
   Routers: {},
   
-  initialize: function($rootEl, tasks) {
+  initialize: function($rootEl, tasksData) {
+    var tasks = new TD.Collections.Tasks(tasksData);
+    
     new TD.Routers.TasksRouter($rootEl, tasks)
     Backbone.history.start();
   }
