@@ -1,6 +1,6 @@
 TD.Views.NewTaskView = Backbone.View.extend({
   events: {
-    "click button.submit": "submit"
+    "submit form": "submit"
   },
 
   render: function () {
@@ -11,7 +11,16 @@ TD.Views.NewTaskView = Backbone.View.extend({
     return that;
   },
 
-  submit: function () {
-    console.log("submit button pressed");
+  submit: function (event) {
+    event.preventDefault();
+    
+    var that = this;
+    
+    var formData = $(event.currentTarget).serializeJSON();
+    var task = new TD.Models.Task(formData.task);
+    
+    that.collection.add(task);
+    task.save();
+    Backbone.history.navigate("#/");
   }
 });
