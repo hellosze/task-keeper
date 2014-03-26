@@ -2,7 +2,8 @@ TD.Views.TaskDetailView = Backbone.View.extend({
   events: {
     // "click button.save": "save",
     "keyup .task_details": "save",
-    "click button.delete": "delete"
+    "click button.delete": "delete",
+    "click button.back": "back"
   },
   
   render: function () {
@@ -44,6 +45,11 @@ TD.Views.TaskDetailView = Backbone.View.extend({
     task = that.model;
     task.destroy();
     
+    Backbone.history.navigate("#/");
+  },
+  
+  back: function () {
+    event.preventDefault();
     Backbone.history.navigate("#/");
   }
 });

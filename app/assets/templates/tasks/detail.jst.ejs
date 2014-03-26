@@ -8,7 +8,6 @@
     <input type="text" name="task[body]" id="task_body" value="<%= task.escape('body') %>" >
   </label>
 
-  <a href="#/">Hide</a>
-
+  <button type="submit" class="back">Back</button>
   <button type="submit" class="delete" data-id="<%= task.escape('id') %>">Delete</button>
 </form>
