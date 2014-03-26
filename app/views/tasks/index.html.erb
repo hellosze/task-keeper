@@ -2,7 +2,7 @@
 <div id="content" style="float: left;"></div>
 
 <script type="application/json" id="bootstrapped_tasks_json">
-  <%= Task.all.to_json.html_safe %>
+  <%= Task.all.sort.to_json.html_safe %>
 </script>
 
 <script type="application/javascript">
