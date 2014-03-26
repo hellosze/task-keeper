@@ -1,7 +1,10 @@
-<h2><%= task.escape("title") %></h2>
+<form>
+  <label for="task_title">
+    <input type="text" name="task[title]" id="task_title" value="<%= task.escape('title') %>" >
+  </label>
 
-<p>
-  Task detail view
-</p>
+  <a href="#/">Back!</a>
 
-<a href="#/">Back</a>
+  <button type="submit" class="delete" data-id="<%= task.escape('id') %>">Delete</button>
+  <button type="submit" class="save" data-id="<%= task.escape('id') %>">Save</button>
+</form>
