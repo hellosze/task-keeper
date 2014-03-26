@@ -9,7 +9,7 @@ window.TD = {
       collection: tasks
     });
     
-    $rootEl.html(tasksListView.rende().$el);
+    $rootEl.html(tasksListView.render().$el);
   }
 };
 
