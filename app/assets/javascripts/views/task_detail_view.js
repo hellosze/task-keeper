@@ -1,7 +1,7 @@
 TD.Views.TaskDetailView = Backbone.View.extend({
-  
   events: {
-    "click button.save": "save",
+    // "click button.save": "save",
+    "keyup .task_details": "save",
     "click button.delete": "delete"
   },
   
@@ -20,22 +20,24 @@ TD.Views.TaskDetailView = Backbone.View.extend({
     event.preventDefault();
     
     var that = this;
-    
-    var formData = $(event.currentTarget.parentElement).serializeJSON();
+
+    var formData = $(event.currentTarget).serializeJSON();
     
     var $currentTarget = $(event.currentTarget);
     var id = parseInt($currentTarget.attr("data-id"));
-    
+
     task = that.model;
     if (formData.task.title != "") {
       task.set('title', formData.task.title);
+      task.set('body', formData.task.body);
       task.save();
     } else {
       formData.task.title = task.escape('title');
+      formData.task.body = task.escape('body');
       $(event.currentTarget.parentElement).find('input').val(task.escape('title'));
     }
     
-    Backbone.history.navigate("#/");
+    Backbone.history.navigate("#/id");
 
   },
   
