@@ -1,3 +1,6 @@
+<div id="sidebar" style="float: left;"></div>
+<div id="content" style="float: left;"></div>
+
 <script type="application/json" id="bootstrapped_tasks_json">
   <%= Task.all.to_json.html_safe %>
 </script>
@@ -7,6 +10,6 @@
 
     var tasks = JSON.parse($("#bootstrapped_tasks_json").html());
 
-    window.TD.initialize($("body"), tasks);
+    window.TD.initialize($("#sidebar"), $("#content"), tasks);
   });
 </script>
