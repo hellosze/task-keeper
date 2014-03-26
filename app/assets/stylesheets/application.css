@@ -11,3 +11,48 @@
  *= require_self
  *= require_tree .
  */
+
+html, body, h2, div, img, label, form, button, ul, ol, li, a, p, select, textarea, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+body, textarea {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a, a:link, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+div {
+  display: block;
+}
+
+select {
+  border: 1px solid black;
+}
+
+input {
+  width: 100%;
+}
