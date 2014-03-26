@@ -32,9 +32,10 @@ TD.Views.TaskDetailView = Backbone.View.extend({
       task.set('body', formData.task.body);
       task.save();
     } else {
-      formData.task.title = task.escape('title');
-      formData.task.body = task.escape('body');
-      $(event.currentTarget.parentElement).find('input').val(task.escape('title'));
+      task.set('title', formData.task.title);
+      task.set('body', formData.task.body);
+      task.save();
+      $(event.currentTarget.parentElement).find('#task_title').attr("placeholder", "Title");
     }
     
     Backbone.history.navigate("#/id");
