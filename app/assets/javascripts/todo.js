@@ -1,12 +1,18 @@
 window.TD = {
-  
   Models: {},
   Collections: {},
   Views: {},
   Routers: {},
-
-  initialize: function ($rootEl, tasks) {
-
-    console.log(tasks);
+  
+  initialize: function($rootEl, tasks) {
+    var tasksListView = new TD.Views.TasksListView({
+      collection: tasks
+    });
+    
+    $rootEl.html(tasksListView.rende().$el);
   }
 };
+
+// $(document).ready(function(){
+//   Todo.initialize();
+// });
