@@ -18,6 +18,7 @@ TD.Views.TaskDetailView = Backbone.View.extend({
   
   save: function (event) {
     event.preventDefault();
+    
     var that = this;
     
     var formData = $(event.currentTarget.parentElement).serializeJSON();
@@ -39,6 +40,13 @@ TD.Views.TaskDetailView = Backbone.View.extend({
   },
   
   delete: function () {
+    event.preventDefault();
     
+    var that = this;
+    
+    task = that.model;
+    task.destroy();
+    
+    Backbone.history.navigate("#/");
   }
 });
