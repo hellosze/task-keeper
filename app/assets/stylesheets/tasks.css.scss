@@ -6,16 +6,22 @@
   min-width: 1020px;
 }
 
+/* sidebar*/
+
+#sidebar{
+  float: left;
+  padding: 30px;
+  width: 400px;
+  height: 100px;
+}
+
 .task {
   border: 2px solid black;
   border-radius: 5px;
   margin: auto;
-  height: 20px;
   padding: 10px 5px;
   margin-bottom: 5px;
   text-align: center;
-  font-weight: bold;
-  font-size: 20px;
   color: white;
   background: #3B5998;
 
@@ -34,8 +40,6 @@
   padding: 10px 5px;
   margin-bottom: 5px;
   text-align: center;
-  font-weight: bold;
-  font-size: 20px;
   vertical-align: middle;
   color: white;
   background: #3B5998;
@@ -45,16 +49,63 @@
   background: #3366FF;
 }
 
-#sidebar{
-  float: left;
-  padding: 30px;
-  width: 400px;
-  height: 100px;
-}
+
+
+
+/* content */
 
 #content {
   float: left;
-  width: 400px;
-  padding-right: 30px;
-  padding-top: 30px;
+  padding: 30px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: white;
+  background: #3B5998;
+}
+
+#task_title {
+  padding: 10px 5px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: #3B5998;
+}
+
+#task_body {
+  padding: 10px 5px;
+  font-size: 15px;
+  height: 120px;
+  width: 300px;
+  height: 200px;
+  text-align: left;
+  color: white;
+  background: #3B5998;
+  padding-bottom: 20px;
+}
+
+button {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px 10px;
+  border-radius: 5px;
+  float: left;
+  background: #000099;
+  color: #D8D8D8;
+}
+
+button:active {
+  background: #3366FF;
+}
+
+.cancel {
+  margin-left: 20px;
+}
+
+.delete {
+  margin-left: 20px;
 }

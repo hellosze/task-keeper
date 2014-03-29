@@ -27,11 +27,29 @@ html, body, h2, div, img, label, form, button, ul, ol, li, a, p, select, textare
   display: table;
 }
 
-h2 {
-  font-weight: bold;
+body, textarea {
+  font-family: monospace;
 }
 
-body, textarea {
+div {
+  display: block;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+body {
   font-family: sans-serif;
   font-size: 12px;
 }
@@ -53,6 +71,13 @@ select {
   border: 1px solid black;
 }
 
-input {
+input, textarea {
   width: 100%;
+  border: 0;
+  outline: none;
+  resize: none;
+}
+
+button {
+    outline: none;
 }

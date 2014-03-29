@@ -1,11 +1,11 @@
 <form class="task_details" data-id="<%= task.escape('id') %>">
   <label for="task_title">
     <input type="text" name="task[title]" id="task_title" value="<%= task.escape('title') %>"
-        placeholder="Title" >
+        placeholder="Title" autocomplete="off">
   </label>
   
   <label for="task_body">
-    <input type="text" name="task[body]" id="task_body" value="<%= task.escape('body') %>" >
+    <textarea name="task[body]" id="task_body"><%= task.escape('body') %></textarea>
   </label>
 
   <button type="submit" class="back">Back</button>
