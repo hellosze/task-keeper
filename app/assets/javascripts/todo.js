@@ -9,7 +9,8 @@ window.TD = {
     
     this._installSidebar($sidebar, tasks);
     
-    new TD.Routers.TasksRouter($content, tasks)
+    new TD.Routers.TasksRouter($content, tasks);
+    $('#content').hide();
     Backbone.history.start();
   },
 
