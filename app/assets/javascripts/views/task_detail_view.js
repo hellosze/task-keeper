@@ -33,7 +33,7 @@ TD.Views.TaskDetailView = Backbone.View.extend({
     task.set('body', formData.task.body);
     task.save();
     
-    Backbone.history.navigate("#/tasks/" + id);
+    Backbone.history.navigate("#/tasks/" + task.escape("id") );
 
   },
   

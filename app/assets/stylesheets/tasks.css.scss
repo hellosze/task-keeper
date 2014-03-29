@@ -7,9 +7,42 @@
 }
 
 .task {
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: auto;
   height: 20px;
   padding: 10px 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: #3B5998;
+
+}
+
+.task:active {
+  background: #3366FF;
+}
+
+#new_task {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: auto;
+  height: 20px;
+  width: 150px;
+  padding: 10px 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+  color: white;
+  background: #3B5998;
+}
+
+#new_task:active {
+  background: #3366FF;
 }
 
 #sidebar{
