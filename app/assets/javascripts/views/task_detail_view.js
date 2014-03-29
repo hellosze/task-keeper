@@ -33,6 +33,7 @@ TD.Views.TaskDetailView = Backbone.View.extend({
     task.set('body', formData.task.body);
     task.save();
     
+    $('#content').show();
     Backbone.history.navigate("#/tasks/" + task.escape("id") );
 
   },
@@ -45,11 +46,14 @@ TD.Views.TaskDetailView = Backbone.View.extend({
     task = that.model;
     task.destroy();
     
+    $('#content').hide();
     Backbone.history.navigate("#/");
   },
   
   back: function () {
     event.preventDefault();
+    
+    $('#content').hide();
     Backbone.history.navigate("#/");
   }
 });
